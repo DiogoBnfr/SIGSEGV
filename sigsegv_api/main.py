@@ -1,4 +1,7 @@
 from fastapi import FastAPI
+from mongoengine import connect
+
+connect('sigsegvdb')
 
 app = FastAPI()
 

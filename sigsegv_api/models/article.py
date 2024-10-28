@@ -1,4 +1,4 @@
-from mongoengine import Document, LazyReferenceField, StringField, DateTimeField
+from mongoengine import Document, LazyReferenceField, StringField, DateTimeField, CASCADE
 
 class Article(Document):
     title = StringField(max_length=100, required=True)

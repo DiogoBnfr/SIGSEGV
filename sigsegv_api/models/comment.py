@@ -1,4 +1,4 @@
-from mongoengine import LazyReferenceField, Document, StringField, DateTimeField
+from mongoengine import LazyReferenceField, Document, StringField, DateTimeField, CASCADE
 
 class Comment(Document):
     content = StringField(max_length=200,required=True)
