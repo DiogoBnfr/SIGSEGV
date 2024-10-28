@@ -1,7 +1,7 @@
-from mongoengine import Document, StringField, ListField, LazyReferenceField
+from mongoengine import Document, EmailField, StringField, ListField, LazyReferenceField
 
 class User(Document):
-    username = StringField(required=True, unique=True)
-    email = StringField(required=True, unique=True)
-    article = ListField(LazyReferenceField('Article'))
+    username = StringField(max_lenght=50, required=True, unique=True)
+    email = EmailField(max_lenght=50, required=True, unique=True)
+    articles = ListField(LazyReferenceField('Article'))
     comments = ListField(LazyReferenceField('Comment'))
